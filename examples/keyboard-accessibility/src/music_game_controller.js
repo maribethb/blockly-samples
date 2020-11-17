@@ -16,6 +16,7 @@ import {MusicGame} from './game';
 import {HelpModal} from './help_modal';
 import {KeyPressModal} from './key_press_modal';
 import {WelcomeModal} from './welcome_modal';
+import {Shortcuts} from './shortcuts';
 import {speaker} from './speaker';
 import {Tutorial} from './tutorial';
 import {CustomCursor} from './custom_cursor';
@@ -48,6 +49,7 @@ export class MusicGameController {
      */
     this.music_ = new Music(this.workspace);
     this.registerPlayShortcut_();
+    this.registerShortcutsShortcut_();
 
     /**
      * The music game object.
@@ -154,6 +156,29 @@ export class MusicGameController {
         Blockly.utils.KeyCodes.P, [Blockly.utils.KeyCodes.SHIFT]);
     Blockly.ShortcutRegistry.registry.addKeyMapping(
         shiftP, playShortcut.name);
+  }
+
+  /**
+   * Does stuff.
+   */
+  registerShortcutsShortcut_() {
+    /** @type {!Blockly.ShortcutRegistry.KeyboardShortcut} */
+    const shortcutsShortcut = {
+      name: 'shortcutsShortcut',
+      preconditionFn: function(workspace) {
+        return true;
+      },
+      callback: () => {
+        console.log('here');
+        new Shortcuts();
+      },
+    };
+
+    Blockly.ShortcutRegistry.registry.register(shortcutsShortcut);
+    // const shiftP = Blockly.ShortcutRegistry.registry.createSerializedKey(
+    //     Blockly.utils.KeyCodes.P, [Blockly.utils.KeyCodes.SHIFT]);
+    Blockly.ShortcutRegistry.registry.addKeyMapping(
+        Blockly.utils.KeyCodes.L, shortcutsShortcut.name);
   }
 
 
