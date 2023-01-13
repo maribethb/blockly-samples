@@ -1,0 +1,43 @@
+# This workflow handles releasing all of the packages in samples.
+
+name: Update GitHub Pages
+
+on:
+  workflow_dispatch:  # Manually trigger. Colon is required.
+
+permissions:
+  contents: write  # For checkout and push.
+
+jobs:
+  Update GitHub Pages:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        ref: master
+
+    # This uses a reverse-engineered email for the github actions bot. See
+    # https://github.com/actions/checkout/issues/13#issuecomment-724415212
+    - name: Git Identity
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email '<41898282+github-actions[bot]@users.noreply.github.com'
+
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+
+    - name: NPM install
+      # Use CI so that we don't update dependencies in this step.
+      run: |
+        npm ci
+        cd examples
+        npm ci
+        cd ..
+
+    - name: Deploy to GH Pages
+      # deploys to origin, so you can use this workflow from a fork to update your personal gh-pages
+      run: npm run deploy
