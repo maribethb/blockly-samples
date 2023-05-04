@@ -11,6 +11,8 @@ import {javascriptGenerator} from 'blockly/javascript';
 import {save, load} from './serialization';
 import {toolbox} from './toolbox';
 import './index.css';
+// import for side effect of registering
+import './configDropdown';
 
 // Register the blocks and generator with Blockly
 Blockly.common.defineBlocks(blocks);
@@ -26,16 +28,30 @@ const ws = Blockly.inject(blocklyDiv, {toolbox});
 // generated code from the workspace, and evals the code.
 // In a real application, you probably shouldn't use `eval`.
 const runCode = () => {
-  const code = javascriptGenerator.workspaceToCode(ws);
-  codeDiv.innerText = code;
+  // const code = javascriptGenerator.workspaceToCode(ws);
+  // codeDiv.innerText = code;
 
-  outputDiv.innerHTML = '';
+  // outputDiv.innerHTML = '';
 
-  eval(code);
+  // eval(code);
+
+  const xml = Blockly.Xml.workspaceToDom(ws);
+  codeDiv.innerText = Blockly.Xml.domToPrettyText(xml);
+
+  const json = Blockly.serialization.workspaces.save(ws);
+  outputDiv.innerText = JSON.stringify(json);
 };
 
 // Load the initial state from storage and run the code.
-load(ws);
+//load(ws);
+
+// Load blocks with unique config attribute
+const xml = `<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="special" id="2QTe.ZISGboPqh4i|;.B" x="231" y="50">
+    <field name="LETTERS" config="c,d,e,f,q">d</field>
+  </block>
+</xml>`;
+Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(xml), ws);
 runCode();
 
 // Every time the workspace changes state, save the changes to storage.

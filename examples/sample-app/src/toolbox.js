@@ -22,6 +22,10 @@ export const toolbox = {
       'contents': [
         {
           'kind': 'block',
+          'type': 'special',
+        },
+        {
+          'kind': 'block',
           'type': 'controls_if',
         },
         {

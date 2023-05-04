@@ -32,3 +32,7 @@ generator['add_text'] = function(block) {
   const code = `${addText}(${text}, ${color});\n`;
   return code;
 };
+
+generator['special'] = function(block) {
+  return '';
+};

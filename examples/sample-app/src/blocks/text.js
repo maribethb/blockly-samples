@@ -32,8 +32,56 @@ const addText = {
   'helpUrl': '',
 };
 
+const special = {
+  'type': 'special',
+  'message0': '%1',
+  'args0': [
+    {
+      'type': 'config_dropdown',
+      'name': 'LETTERS',
+      'options': [
+        [
+          'this is a',
+          'a',
+        ],
+        [
+          'b but it might be in a different language',
+          'b',
+        ],
+        [
+          'c is here',
+          'c',
+        ],
+        [
+          'd this is just the human readable string',
+          'd',
+        ],
+        [
+          'this one is e',
+          'e',
+        ],
+        [
+          'press f',
+          'f',
+        ],
+        [
+          'g is here',
+          'g',
+        ],
+        [
+          'h hope this works',
+          'h',
+        ],
+      ],
+    },
+  ],
+  'colour': 230,
+  'tooltip': '',
+  'helpUrl': '',
+};
+
 // Create the block definitions for the JSON-only blocks.
 // This does not register their definitions with Blockly.
 // This file has no side effects!
 export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray(
-    [addText]);
+    [addText, special]);
