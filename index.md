@@ -1,18 +1,16 @@
----
-layout: index
----
-
 # Plugins
 
 ## Blocks
 * [Blocks Plus Minus](plugins/block-plus-minus/test/index.html)
 * [Blocks Dynamic Connection](plugins/block-dynamic-connection/test/index.html)
+* [Blocks Shareable Procedures](plugins/block-shareable-procedures/test/index.html)
 
 ## Fields
 * [Field Bitmap](plugins/field-bitmap/test/index.html)
 * [Field HSV Colour](plugins/field-colour-hsv-sliders/test/index.html)
 * [Field Date](plugins/field-date/test/index.html)
 * [Field Slider](plugins/field-slider/test/index.html)
+* [Field Dependent Dropdown](plugins/field-dependent-dropdown/test/index.html)
 * [Field Grid Dropdown](plugins/field-grid-dropdown/test/index.html)
 
 
@@ -45,6 +43,7 @@ layout: index
 # Third Party Plugins
 These plugins are not published by the Blockly team. They are linked here for your convenience.
 * [Lexical Variables](https://www.npmjs.com/package/@mit-app-inventor/blockly-block-lexical-variables)
+* [Workspace Multi-Select](https://www.npmjs.com/package/@mit-app-inventor/blockly-plugin-workspace-multiselect)
 
 # Examples
 
