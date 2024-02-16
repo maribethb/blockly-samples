@@ -5,6 +5,7 @@
   <link rel="icon" type="image/x-icon" href="/blockly-samples/favicon.ico" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://blocklycodelabs.dev/styles/main.css" />
   <link rel="stylesheet" href="/blockly-samples/css/custom.css"/>
   <!-- END INJECTED HEADER -->
     <title>@blockly/plugin-typed-variable-modal Demo</title>
@@ -23,8 +24,8 @@
       <div class="title">@blockly/plugin-typed-variable-modal Demo</div>
       <div class="subtitle">A Blockly plugin to create a modal for creating typed variables.</div>
     </div>
-    5.0.18
-    
+    7.0.10
+
     <a href="https://github.com/google/blockly-samples/blob/master/plugins/typed-variable-modal" class="button" target="_blank">View code</a>
     <a href="https://www.npmjs.com/package/@blockly/plugin-typed-variable-modal" class="button" target="_blank">View on npm</a>
   </nav>
@@ -61,37 +62,43 @@ can be
 found <a href="https://developers.google.com/blockly/guides/configure/web/toolbox?hl=en#dynamic_categories">here</a>.</p>
 <h4 id="import">Import</h4>
 <pre><code class="js language-js">import * as Blockly from 'blockly';
-import { TypedVariableModal } from '@blockly/plugin-typed-variable-modal';</code></pre>
+import {TypedVariableModal} from '@blockly/plugin-typed-variable-modal';</code></pre>
 <p>or</p>
 <pre><code class="js language-js">&lt;script src="https://unpkg.com/@blockly/plugin-typed-variable-modal"&gt;&lt;/script&gt;</code></pre>
 <h4 id="setup">Setup</h4>
 <p>Create your workspace.</p>
 <pre><code class="js language-js">workspace = Blockly.inject('blocklyDiv', {
-    toolbox: toolbox
+  toolbox: toolbox,
 });</code></pre>
 <p>Add a custom category to your toolbox.</p>
 <pre><code class="xml language-xml">&lt;category name="Colours" custom="CREATE_TYPED_VARIABLE"&gt;&lt;/category&gt;</code></pre>
 <p>Define a callback to provide the category content.</p>
-<pre><code class="js language-js">const createFlyout = function(workspace) {
-    let xmlList = [];
-    // Add your button and give it a callback name.
-    const button = document.createElement('button');
-    button.setAttribute('text', 'Create Typed Variable');
-    button.setAttribute('callbackKey', 'callbackName');
+<pre><code class="js language-js">const createFlyout = function (workspace) {
+  let xmlList = [];
+  // Add your button and give it a callback name.
+  const button = document.createElement('button');
+  button.setAttribute('text', 'Create Typed Variable');
+  button.setAttribute('callbackKey', 'callbackName');
 
-    xmlList.push(button);
+  xmlList.push(button);
 
-    // This gets all the variables that the user creates and adds them to the
-    // flyout.
-    const blockList = Blockly.VariablesDynamic.flyoutCategoryBlocks(workspace);
-    xmlList = xmlList.concat(blockList);
-    return xmlList;
+  // This gets all the variables that the user creates and adds them to the
+  // flyout.
+  const blockList = Blockly.VariablesDynamic.flyoutCategoryBlocks(workspace);
+  xmlList = xmlList.concat(blockList);
+  return xmlList;
 };</code></pre>
 <p>Register the callback for the toolbox category.</p>
-<pre><code class="js language-js">workspace.registerToolboxCategoryCallback('CREATE_TYPED_VARIABLE', createFlyout);</code></pre>
+<pre><code class="js language-js">workspace.registerToolboxCategoryCallback(
+  'CREATE_TYPED_VARIABLE',
+  createFlyout,
+);</code></pre>
 <p>Create your Typed Variable Modal using the workspace, callbackName for the
 button and your types.</p>
-<pre><code class="js language-js">const typedVarModal = new TypedVariableModal(workspace, 'callbackName', [["PENGUIN", "Penguin"], ["GIRAFFE", "Giraffe"]]);
+<pre><code class="js language-js">const typedVarModal = new TypedVariableModal(workspace, 'callbackName', [
+  ['PENGUIN', 'Penguin'],
+  ['GIRAFFE', 'Giraffe'],
+]);
 typedVarModal.init();</code></pre>
 <h4 id="blockly-languages">Blockly Languages</h4>
 <p>We do not currently support translating the text in this plugin to different

@@ -8,45 +8,44 @@
  * An example implementation of how one might replace Blockly's browser
  * dialogs. This is just an example, and applications are not encouraged to use
  * it verbatim.
- *
  * @namespace
  */
 CustomDialog = {};
 
 /** Override Blockly.dialog.setAlert() with custom implementation. */
-Blockly.dialog.setAlert(function(message, callback) {
+Blockly.dialog.setAlert(function (message, callback) {
   console.log('Alert: ' + message);
   CustomDialog.show('Alert', message, {
-    onCancel: callback
+    onCancel: callback,
   });
 });
 
 /** Override Blockly.dialog.setConfirm() with custom implementation. */
-Blockly.dialog.setConfirm(function(message, callback) {
+Blockly.dialog.setConfirm(function (message, callback) {
   console.log('Confirm: ' + message);
   CustomDialog.show('Confirm', message, {
     showOkay: true,
-    onOkay: function() {
+    onOkay: function () {
       callback(true);
     },
     showCancel: true,
-    onCancel: function() {
+    onCancel: function () {
       callback(false);
-    }
+    },
   });
 });
 
 /** Override Blockly.dialog.setPrompt() with custom implementation. */
-Blockly.dialog.setPrompt(function(message, defaultValue, callback) {
+Blockly.dialog.setPrompt(function (message, defaultValue, callback) {
   console.log('Prompt: ' + message);
   CustomDialog.show('Prompt', message, {
     showInput: true,
     showOkay: true,
-    onOkay: function() {
+    onOkay: function () {
       callback(CustomDialog.inputField.value);
     },
     showCancel: true,
-    onCancel: function() {
+    onCancel: function () {
       callback(null);
     },
   });
@@ -54,7 +53,7 @@ Blockly.dialog.setPrompt(function(message, defaultValue, callback) {
 });
 
 /** Hides any currently visible dialog. */
-CustomDialog.hide = function() {
+CustomDialog.hide = function () {
   if (CustomDialog.backdropDiv_) {
     CustomDialog.backdropDiv_.style.display = 'none';
     CustomDialog.dialogDiv_.style.display = 'none';
@@ -70,30 +69,30 @@ CustomDialog.hide = function() {
  *  - onOkay: Callback to handle the okay button.
  *  - onCancel: Callback to handle the cancel button and backdrop clicks.
  */
-CustomDialog.show = function(title, message, options) {
-  var backdropDiv = CustomDialog.backdropDiv_;
-  var dialogDiv = CustomDialog.dialogDiv_;
+CustomDialog.show = function (title, message, options) {
+  let backdropDiv = CustomDialog.backdropDiv_;
+  let dialogDiv = CustomDialog.dialogDiv_;
   if (!dialogDiv) {
     // Generate HTML
     backdropDiv = document.createElement('div');
     backdropDiv.id = 'customDialogBackdrop';
     backdropDiv.style.cssText =
-        'position: absolute;' +
-        'top: 0; left: 0; right: 0; bottom: 0;' +
-        'background-color: rgba(0, 0, 0, 0.7);' +
-        'z-index: 100;';
+      'position: absolute;' +
+      'top: 0; left: 0; right: 0; bottom: 0;' +
+      'background-color: rgba(0, 0, 0, 0.7);' +
+      'z-index: 100;';
     document.body.appendChild(backdropDiv);
 
     dialogDiv = document.createElement('div');
     dialogDiv.id = 'customDialog';
     dialogDiv.style.cssText =
-        'background-color: #fff;' +
-        'width: 400px;' +
-        'margin: 20px auto 0;' +
-        'padding: 10px;';
+      'background-color: #fff;' +
+      'width: 400px;' +
+      'margin: 20px auto 0;' +
+      'padding: 10px;';
     backdropDiv.appendChild(dialogDiv);
 
-    dialogDiv.onclick = function(event) {
+    dialogDiv.onclick = function (event) {
       event.stopPropagation();
     };
 
@@ -104,57 +103,63 @@ CustomDialog.show = function(title, message, options) {
   dialogDiv.style.display = 'block';
 
   dialogDiv.innerHTML =
-      '<header class="customDialogTitle"></header>' +
-      '<p class="customDialogMessage"></p>' +
-      (options.showInput ? '<div><input id="customDialogInput"></div>' : '') +
-      '<div class="customDialogButtons">' +
-      (options.showCancel ? '<button id="customDialogCancel">Cancel</button>': '') +
-      (options.showOkay ? '<button id="customDialogOkay">OK</button>': '') +
-      '</div>';
-  dialogDiv.getElementsByClassName('customDialogTitle')[0]
-      .appendChild(document.createTextNode(title));
-  dialogDiv.getElementsByClassName('customDialogMessage')[0]
-      .appendChild(document.createTextNode(message));
+    '<header class="customDialogTitle"></header>' +
+    '<p class="customDialogMessage"></p>' +
+    (options.showInput ? '<div><input id="customDialogInput"></div>' : '') +
+    '<div class="customDialogButtons">' +
+    (options.showCancel
+      ? '<button id="customDialogCancel">Cancel</button>'
+      : '') +
+    (options.showOkay ? '<button id="customDialogOkay">OK</button>' : '') +
+    '</div>';
+  dialogDiv
+    .getElementsByClassName('customDialogTitle')[0]
+    .appendChild(document.createTextNode(title));
+  dialogDiv
+    .getElementsByClassName('customDialogMessage')[0]
+    .appendChild(document.createTextNode(message));
 
-  var onOkay = function(event) {
+  const onOkay = function (event) {
     CustomDialog.hide();
     options.onOkay && options.onOkay();
     event && event.stopPropagation();
   };
-  var onCancel = function(event) {
+  const onCancel = function (event) {
     CustomDialog.hide();
     options.onCancel && options.onCancel();
     event && event.stopPropagation();
   };
 
-  var dialogInput = document.getElementById('customDialogInput');
+  const dialogInput = document.getElementById('customDialogInput');
   CustomDialog.inputField = dialogInput;
   if (dialogInput) {
     dialogInput.focus();
 
-    dialogInput.onkeyup = function(event) {
+    dialogInput.onkeyup = function (event) {
       if (event.key === 'Enter') {
         // Process as OK when user hits enter.
         onOkay();
         return false;
-      } else if (event.key === 'Escape')  {
+      } else if (event.key === 'Escape') {
         // Process as cancel when user hits esc.
         onCancel();
         return false;
       }
     };
   } else {
-    var okay = document.getElementById('customDialogOkay');
+    const okay = document.getElementById('customDialogOkay');
     okay && okay.focus();
   }
 
   if (options.showOkay) {
-    document.getElementById('customDialogOkay')
-        .addEventListener('click', onOkay);
+    document
+      .getElementById('customDialogOkay')
+      .addEventListener('click', onOkay);
   }
   if (options.showCancel) {
-    document.getElementById('customDialogCancel')
-        .addEventListener('click', onCancel);
+    document
+      .getElementById('customDialogCancel')
+      .addEventListener('click', onCancel);
   }
 
   backdropDiv.onclick = onCancel;

@@ -5,6 +5,7 @@
   <link rel="icon" type="image/x-icon" href="/blockly-samples/favicon.ico" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://blocklycodelabs.dev/styles/main.css" />
   <link rel="stylesheet" href="/blockly-samples/css/custom.css"/>
   <!-- END INJECTED HEADER -->
     <title>@blockly/plugin-scroll-options Demo</title>
@@ -23,8 +24,8 @@
       <div class="title">@blockly/plugin-scroll-options Demo</div>
       <div class="subtitle">A Blockly plugin that adds advanced scroll options such as scroll-on-drag and scroll while holding a block.</div>
     </div>
-    3.0.18
-    
+    5.0.11
+
     <a href="https://github.com/google/blockly-samples/blob/master/plugins/scroll-options" class="button" target="_blank">View code</a>
     <a href="https://www.npmjs.com/package/@blockly/plugin-scroll-options" class="button" target="_blank">View on npm</a>
   </nav>
@@ -74,16 +75,20 @@ the Usage and API sections for more details on how to configure these behaviors.
 default behavior, which enables both scroll options and uses the default
 parameters for edge scrolling.</p>
 <pre><code class="js language-js">import * as Blockly from 'blockly';
-import {ScrollOptions, ScrollBlockDragger, ScrollMetricsManager} from '@blockly/plugin-scroll-options';
+import {
+  ScrollOptions,
+  ScrollBlockDragger,
+  ScrollMetricsManager,
+} from '@blockly/plugin-scroll-options';
 
 // Inject Blockly.
 const workspace = Blockly.inject('blocklyDiv', {
   toolbox: toolboxCategories,
   plugins: {
-      // These are both required.
-      'blockDragger': ScrollBlockDragger,
-      'metricsManager': ScrollMetricsManager,
-    },
+    // These are both required.
+    blockDragger: ScrollBlockDragger,
+    metricsManager: ScrollMetricsManager,
+  },
   move: {
     wheel: true, // Required for wheel scroll to work.
   },

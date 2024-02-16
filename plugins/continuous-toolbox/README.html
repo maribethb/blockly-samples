@@ -5,6 +5,7 @@
   <link rel="icon" type="image/x-icon" href="/blockly-samples/favicon.ico" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://blocklycodelabs.dev/styles/main.css" />
   <link rel="stylesheet" href="/blockly-samples/css/custom.css"/>
   <!-- END INJECTED HEADER -->
     <title>@blockly/continuous-toolbox Demo</title>
@@ -23,8 +24,8 @@
       <div class="title">@blockly/continuous-toolbox Demo</div>
       <div class="subtitle">A Blockly plugin that adds a continous-scrolling style toolbox and flyout</div>
     </div>
-    3.0.16
-    
+    5.0.12
+
     <a href="https://github.com/google/blockly-samples/blob/master/plugins/continuous-toolbox" class="button" target="_blank">View code</a>
     <a href="https://www.npmjs.com/package/@blockly/continuous-toolbox" class="button" target="_blank">View on npm</a>
   </nav>
@@ -62,15 +63,19 @@ The continuous toolbox is shown here with the 'Zelos' theme, and the style can b
 <p>Include the toolbox, flyout, and metrics manager classes from the plugin in the options struct used when injecting Blockly. This style of flyout works best with a toolbox definition that does not use collapsible categories.</p>
 <p>Note that this plugin uses APIs introduced in the <code>3.20200924.3</code> release of Blockly, so you will need to use at least this version or higher.</p>
 <pre><code class="js language-js">import * as Blockly from 'blockly';
-import {ContinuousToolbox, ContinuousFlyout, ContinuousMetrics} from '@blockly/continuous-toolbox';
+import {
+  ContinuousToolbox,
+  ContinuousFlyout,
+  ContinuousMetrics,
+} from '@blockly/continuous-toolbox';
 
 // Inject Blockly.
 const workspace = Blockly.inject('blocklyDiv', {
   plugins: {
-      'toolbox': ContinuousToolbox,
-      'flyoutsVerticalToolbox': ContinuousFlyout,
-      'metricsManager': ContinuousMetrics,
-    },
+    toolbox: ContinuousToolbox,
+    flyoutsVerticalToolbox: ContinuousFlyout,
+    metricsManager: ContinuousMetrics,
+  },
   toolbox: toolboxCategories,
   // ... your other options here ...
 });</code></pre>

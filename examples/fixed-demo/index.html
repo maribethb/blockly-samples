@@ -1,33 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
   <!-- INJECTED HEADER -->
   <meta name="viewport" content="width=device-width,maximum-scale=2">
   <link rel="icon" type="image/x-icon" href="/blockly-samples/favicon.ico" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://blocklycodelabs.dev/styles/main.css" />
   <link rel="stylesheet" href="/blockly-samples/css/custom.css"/>
   <!-- END INJECTED HEADER -->
-  <meta charset="utf-8">
-  <title>Fixed Blockly</title>
-  <script src="./node_modules/blockly/blockly_compressed.js"></script>
-  <script src="./node_modules/blockly/blocks_compressed.js"></script>
-  <script src="./node_modules/blockly/msg/en.js"></script>
+    <meta charset="utf-8" />
+    <title>Fixed Blockly</title>
+    <script src="./node_modules/blockly/blockly_compressed.js"></script>
+    <script src="./node_modules/blockly/blocks_compressed.js"></script>
+    <script src="./node_modules/blockly/msg/en.js"></script>
     <style>
-    body {
-      background-color: #fff;
-      font-family: sans-serif;
-    }
-    h1 {
-      font-weight: normal;
-      font-size: 140%;
-    }
-    .demo {
-      padding: 1rem;
-    }
-  </style>
-</head>
-<body class="root">
+      body {
+        background-color: #fff;
+        font-family: sans-serif;
+      }
+      h1 {
+        font-weight: normal;
+        font-size: 140%;
+      }
+      .demo {
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body class="root">
       
   <!-- NAV BAR -->
   <nav id="toolbar">
@@ -41,7 +42,7 @@
       <div class="title">Fixed Blockly</div>
       <div class="subtitle">Inject Blockly into a page as a fixed element.</div>
     </div>
-    
+
     <a href="https://github.com/google/blockly-samples/blob/master/examples/fixed-demo" class="button" target="_blank">View code</a>
   </nav>
   <!-- END NAV BAR -->
@@ -49,58 +50,67 @@
         <div class="drop-shadow"></div>
         
         
-  <div class="demo">
-    <p>This is a simple demo of injecting Blockly into a fixed-sized 'div' element.</p>
+    <div class="demo">
+      <p>
+        This is a simple demo of injecting Blockly into a fixed-sized 'div'
+        element.
+      </p>
 
-    <p>&rarr; More info on <a href="https://developers.google.com/blockly/guides/configure/web/fixed-size">injecting fixed-sized Blockly</a>&hellip;</p>
+      <p>
+        &rarr; More info on
+        <a
+          href="https://developers.google.com/blockly/guides/configure/web/fixed-size"
+          >injecting fixed-sized Blockly</a
+        >&hellip;
+      </p>
 
-    <div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
-  </div>
+      <div id="blocklyDiv" style="height: 480px; width: 600px"></div>
+    </div>
 
-  <script>
-    const toolbox = {
-      "kind": "flyoutToolbox",
-      "contents": [
-        {
-          "kind": "block",
-          "type": "controls_if"
-        },
-        {
-          "kind" : "block",
-          "type" : "logic_compare"
-        },
-        {
-          "kind": "block",
-          "type": "controls_repeat_ext"
-        },
-        {
-          "kind": "block",
-          "type": "math_number",
-          "fields": {
-            "NUM": 123
-          }
-        },
-        {
-          "kind": "block",
-          "type": "math_arithmetic"
-        },
-        {
-          "kind": "block",
-          "type": "text"
-        },
-        {
-          "kind" : "block",
-          "type" : "text_print"
-        }
-      ]
-    };
+    <script>
+      const toolbox = {
+        kind: 'flyoutToolbox',
+        contents: [
+          {
+            kind: 'block',
+            type: 'controls_if',
+          },
+          {
+            kind: 'block',
+            type: 'logic_compare',
+          },
+          {
+            kind: 'block',
+            type: 'controls_repeat_ext',
+          },
+          {
+            kind: 'block',
+            type: 'math_number',
+            fields: {
+              NUM: 123,
+            },
+          },
+          {
+            kind: 'block',
+            type: 'math_arithmetic',
+          },
+          {
+            kind: 'block',
+            type: 'text',
+          },
+          {
+            kind: 'block',
+            type: 'text_print',
+          },
+        ],
+      };
 
-    const demoWorkspace = Blockly.inject('blocklyDiv',
-        {media: './node_modules/blockly/media/',
-         toolbox: toolbox});
-  </script>
-
-</main>
+      const demoWorkspace = Blockly.inject('blocklyDiv', {
+        media: './node_modules/blockly/media/',
+        toolbox: toolbox,
+      });
+    </script>
+  </main>
   
   <!-- FOOTER  -->
   <footer id="footer">

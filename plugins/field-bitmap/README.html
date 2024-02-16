@@ -5,6 +5,7 @@
   <link rel="icon" type="image/x-icon" href="/blockly-samples/favicon.ico" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://blocklycodelabs.dev/styles/main.css" />
   <link rel="stylesheet" href="/blockly-samples/css/custom.css"/>
   <!-- END INJECTED HEADER -->
     <title>@blockly/field-bitmap Demo</title>
@@ -23,8 +24,8 @@
       <div class="title">@blockly/field-bitmap Demo</div>
       <div class="subtitle">A field that lets users input a pixel grid with their mouse.</div>
     </div>
-    2.0.18
-    
+    4.0.12
+
     <a href="https://github.com/google/blockly-samples/blob/master/plugins/field-bitmap" class="button" target="_blank">View code</a>
     <a href="https://www.npmjs.com/package/@blockly/field-bitmap" class="button" target="_blank">View on npm</a>
   </nav>
@@ -82,41 +83,43 @@ Blockly.Blocks["test_field_bitmap"] = {
 <pre><code class="js language-js">import * as Blockly from 'blockly';
 import '@blockly/field-bitmap';
 Blockly.defineBlocksWithJsonArray([
-    {
-        "type": "test_field_bitmap",
-        "message0": "bitmap: %1",
-        "args0": [
-            {
-                "type": "field_bitmap",
-                "name": "FIELDNAME",
-                "value": [
-                    [0, 0, 0, 0, 0, 0, 0],
-                    [0, 1, 1, 0, 1, 1, 0],
-                    [0, 0, 0, 0, 0, 0, 0],
-                    [0, 1, 1, 1, 1, 1, 0],
-                    [0, 1, 0, 0, 0, 1, 0],
-                    [0, 0, 1, 1, 1, 0, 0],
-                    [0, 0, 0, 0, 0, 0, 0],
-                ],
-            }
-        ]
-    }]);</code></pre>
+  {
+    type: 'test_field_bitmap',
+    message0: 'bitmap: %1',
+    args0: [
+      {
+        type: 'field_bitmap',
+        name: 'FIELDNAME',
+        value: [
+          [0, 0, 0, 0, 0, 0, 0],
+          [0, 1, 1, 0, 1, 1, 0],
+          [0, 0, 0, 0, 0, 0, 0],
+          [0, 1, 1, 1, 1, 1, 0],
+          [0, 1, 0, 0, 0, 1, 0],
+          [0, 0, 1, 1, 1, 0, 0],
+          [0, 0, 0, 0, 0, 0, 0],
+        ],
+      },
+    ],
+  },
+]);</code></pre>
 <p>Example with width and height:</p>
 <pre><code class="js language-js">import * as Blockly from 'blockly';
 import '@blockly/field-bitmap';
 Blockly.defineBlocksWithJsonArray([
-    {
-        "type": "test_field_bitmap",
-        "message0": "bitmap: %1",
-        "args0": [
-            {
-                "type": "field_bitmap",
-                "name": "FIELDNAME",
-                "width": 8,
-                "height": 8
-            }
-        ]
-    }]);</code></pre>
+  {
+    type: 'test_field_bitmap',
+    message0: 'bitmap: %1',
+    args0: [
+      {
+        type: 'field_bitmap',
+        name: 'FIELDNAME',
+        width: 8,
+        height: 8,
+      },
+    ],
+  },
+]);</code></pre>
 <h2 id="license">License</h2>
 <p>Apache 2.0</p>
       </div>

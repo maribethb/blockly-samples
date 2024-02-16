@@ -5,6 +5,7 @@
   <link rel="icon" type="image/x-icon" href="/blockly-samples/favicon.ico" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://blocklycodelabs.dev/styles/main.css" />
   <link rel="stylesheet" href="/blockly-samples/css/custom.css"/>
   <!-- END INJECTED HEADER -->
     <title>@blockly/field-slider Demo</title>
@@ -23,8 +24,8 @@
       <div class="title">@blockly/field-slider Demo</div>
       <div class="subtitle">A Blockly slider field.</div>
     </div>
-    4.0.17
-    
+    6.1.5
+
     <a href="https://github.com/google/blockly-samples/blob/master/plugins/field-slider" class="button" target="_blank">View code</a>
     <a href="https://www.npmjs.com/package/@blockly/field-slider" class="button" target="_blank">View on npm</a>
   </nav>
@@ -61,28 +62,29 @@
 <h3 id="javascript">JavaScript</h3>
 <pre><code class="js language-js">import * as Blockly from 'blockly';
 import {FieldSlider} from '@blockly/field-slider';
-Blockly.Blocks["test_field_slider"] = {
+Blockly.Blocks['test_field_slider'] = {
   init: function () {
     this.appendDummyInput()
-      .appendField("slider: ")
-      .appendField(new FieldSlider(50), "FIELDNAME");
-  }
+      .appendField('slider: ')
+      .appendField(new FieldSlider(50), 'FIELDNAME');
+  },
 };</code></pre>
 <h3 id="json">JSON</h3>
 <pre><code class="js language-js">import * as Blockly from 'blockly';
 import '@blockly/field-slider';
 Blockly.defineBlocksWithJsonArray([
-    {
-        "type": "test_field_slider",
-        "message0": "slider: %1",
-        "args0": [
-            {
-                "type": "field_slider",
-                "name": "FIELDNAME",
-                "value": 50
-            }
-        ]
-    }]);</code></pre>
+  {
+    type: 'test_field_slider',
+    message0: 'slider: %1',
+    args0: [
+      {
+        type: 'field_slider',
+        name: 'FIELDNAME',
+        value: 50,
+      },
+    ],
+  },
+]);</code></pre>
 <h2 id="license">License</h2>
 <p>Apache 2.0</p>
       </div>
