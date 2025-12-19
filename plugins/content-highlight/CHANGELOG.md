@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.5](https://github.com/google/blockly-samples/compare/@blockly/workspace-content-highlight@6.0.4...@blockly/workspace-content-highlight@6.0.5) (2025-12-19)
+
+
+### Bug Fixes
+
+* handle comment moves and resizes in content-highlight ([#2653](https://github.com/google/blockly-samples/issues/2653)) ([031f351](https://github.com/google/blockly-samples/commit/031f351c295c60c5df1db7e9136c35b7e72661fd))
+
+
+
 ## [6.0.4](https://github.com/google/blockly-samples/compare/@blockly/workspace-content-highlight@6.0.3...@blockly/workspace-content-highlight@6.0.4) (2025-12-19)
 
 **Note:** Version bump only for package @blockly/workspace-content-highlight

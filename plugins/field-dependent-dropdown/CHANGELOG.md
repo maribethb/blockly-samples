@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.6](https://github.com/google/blockly-samples/compare/@blockly/field-dependent-dropdown@5.0.5...@blockly/field-dependent-dropdown@5.0.6) (2025-12-19)
+
+**Note:** Version bump only for package @blockly/field-dependent-dropdown
+
+
+
+
+
 ## [5.0.5](https://github.com/google/blockly-samples/compare/@blockly/field-dependent-dropdown@5.0.4...@blockly/field-dependent-dropdown@5.0.5) (2025-12-19)
 
 **Note:** Version bump only for package @blockly/field-dependent-dropdown
