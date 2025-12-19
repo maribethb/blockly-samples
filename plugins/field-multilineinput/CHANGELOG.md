@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.4](https://github.com/google/blockly-samples/compare/@blockly/field-multilineinput@6.0.3...@blockly/field-multilineinput@6.0.4) (2025-12-19)
+
+
+### Bug Fixes
+
+* Use getTextWidth instead of getFastTextWidth ([#2632](https://github.com/google/blockly-samples/issues/2632)) ([affcd6e](https://github.com/google/blockly-samples/commit/affcd6ed28506c3640f3a77700640d38eec43841))
+
+
+
 ## [6.0.3](https://github.com/google/blockly-samples/compare/@blockly/field-multilineinput@6.0.2...@blockly/field-multilineinput@6.0.3) (2025-10-02)
 
 **Note:** Version bump only for package @blockly/field-multilineinput

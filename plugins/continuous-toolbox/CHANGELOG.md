@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.4](https://github.com/google/blockly-samples/compare/@blockly/continuous-toolbox@7.0.3...@blockly/continuous-toolbox@7.0.4) (2025-12-19)
+
+
+### Bug Fixes
+
+* In continuous toolbox plugin, replace blocklyTreeLabel with blocklyToolboxCategoryLabel ([#2633](https://github.com/google/blockly-samples/issues/2633)) ([9ac3c28](https://github.com/google/blockly-samples/commit/9ac3c284b03955587ca9f573c52ebcf99f6c00e2))
+
+
+
 ## [7.0.3](https://github.com/google/blockly-samples/compare/@blockly/continuous-toolbox@7.0.2...@blockly/continuous-toolbox@7.0.3) (2025-10-02)
 
 
