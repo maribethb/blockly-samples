@@ -7,9 +7,9 @@
     "description": "Generate code from JSON without graphics.",
     "files": [
       "index.html",
-      "./node_modules/blockly/*_compressed.js",
-      "./node_modules/blockly/*_compressed.js.map",
-      "./node_modules/blockly/msg/en.js"
+      "../lib/blockly/*_compressed.js",
+      "../lib/blockly/*_compressed.js.map",
+      "../lib/blockly/msg/en.js"
     ]
   },
   "dependencies": {

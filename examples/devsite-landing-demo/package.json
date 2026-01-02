@@ -12,10 +12,10 @@
       "script.js",
       "style.css",
       "toolbox.js",
-      "./node_modules/blockly/*_compressed.js",
-      "./node_modules/blockly/*_compressed.js.map",
-      "./node_modules/blockly/msg/*.js",
-      "./node_modules/blockly/media/*"
+      "../lib/blockly/*_compressed.js",
+      "../lib/blockly/*_compressed.js.map",
+      "../lib/blockly/msg/*.js",
+      "../lib/blockly/media/*"
     ]
   },
   "dependencies": {

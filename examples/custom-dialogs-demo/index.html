@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <title>Blockly Demo: Custom Dialog</title>
-    <script src="./node_modules/blockly/blockly_compressed.js"></script>
-    <script src="./node_modules/blockly/blocks_compressed.js"></script>
-    <script src="./node_modules/blockly/msg/en.js"></script>
+    <script src="../lib/blockly/blockly_compressed.js"></script>
+    <script src="../lib/blockly/blocks_compressed.js"></script>
+    <script src="../lib/blockly/msg/en.js"></script>
     <style>
       body {
         background-color: #fff;
@@ -80,7 +80,7 @@
       };
 
       var demoWorkspace = Blockly.inject('blocklyDiv', {
-        media: './node_modules/blockly/media/',
+        media: '../lib/blockly/media/',
         toolbox: toolbox,
       });
     </script>

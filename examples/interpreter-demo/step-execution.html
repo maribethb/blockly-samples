@@ -8,10 +8,10 @@
     without modification. -->
     <script src="acorn_interpreter.js"></script>
 
-    <script src="./node_modules/blockly/blockly_compressed.js"></script>
-    <script src="./node_modules/blockly/blocks_compressed.js"></script>
-    <script src="./node_modules/blockly/javascript_compressed.js"></script>
-    <script src="./node_modules/blockly/msg/en.js"></script>
+    <script src="../lib/blockly/blockly_compressed.js"></script>
+    <script src="../lib/blockly/blocks_compressed.js"></script>
+    <script src="../lib/blockly/javascript_compressed.js"></script>
+    <script src="../lib/blockly/msg/en.js"></script>
     <style>
       body {
         background-color: #fff;
@@ -164,7 +164,7 @@
       };
 
       const demoWorkspace = Blockly.inject('blocklyDiv', {
-        media: './node_modules/blockly/media/',
+        media: '../lib/blockly/media/',
         toolbox: toolboxJson,
       });
       javascript.javascriptGenerator.STATEMENT_PREFIX = 'highlightBlock(%1);\n';

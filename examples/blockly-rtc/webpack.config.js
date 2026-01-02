@@ -48,7 +48,7 @@ module.exports = {
     // Copy over media resources from the Blockly package
     new CopyPlugin([
       {
-        from: path.resolve(__dirname, './node_modules/blockly/media'),
+        from: path.resolve(__dirname, '../lib/blockly/media'),
         to: path.resolve(__dirname, 'build/media'),
       },
     ]),
