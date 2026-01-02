@@ -116,3 +116,12 @@ cleans and builds the src and test directories of each plugin.
 
 You shouldn't need to run this script directly, instead it is run by
 `npm run deploy` and `npm run deploy:upstream`.
+
+### `npm run prepare-examples`
+
+Run this script to copy the entire contents of the installed
+`blockly` package and to copy each local `@blockly/*` plugin's
+`dist/` output (if present) into `examples/lib/` so example test
+pages can reference those packages. This is run automatically
+before deploying to GitHub Pages. To view an example test page on
+your file system, run this command manually first.

@@ -253,15 +253,12 @@ function preparePluginsForLocal(isBeta) {
  */
 function prepareExamplesForLocal(isBeta) {
   return (done) => {
-    const examplesDirectory = 'examples';
     if (isBeta) {
-      execSync(`npx lerna exec -- npm install blockly@beta --force`, {
-        cwd: examplesDirectory,
+      execSync(`npm install --workspace=examples blockly@beta --force`, {
         stdio: 'inherit',
       });
     }
-    execSync(`npm run boot`, {cwd: examplesDirectory, stdio: 'inherit'});
-    // Bundles any examples that define a predeploy script (ex. blockly-react).
+    // Bundles any examples that define a predeploy script (ex. developer-tools).
     execSync(`npm run deploy:prepare:examples`, {stdio: 'inherit'});
     done();
   };
