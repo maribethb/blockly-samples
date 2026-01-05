@@ -29,7 +29,7 @@ async function copyDir(src, dest) {
   }
   try {
     // Resolve package root by locating package.json upwards from the package entry.
-    let entryPath = require.resolve('blockly');
+    const entryPath = require.resolve('blockly');
     let dir = path.dirname(entryPath);
     let blocklyDir = null;
     while (dir && dir !== path.parse(dir).root) {
