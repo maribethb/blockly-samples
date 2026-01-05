@@ -3,7 +3,7 @@ summary: How to validate blocks and display a warning indicator for invalid bloc
 id: validation-and-warnings
 categories: blockly,codelab,validation,warning
 status: Published
-Feedback Link: https://github.com/google/blockly-samples/issues/new/choose
+Feedback Link: https://github.com/RaspberryPiFoundation/blockly-samples/issues/new/choose
 
 # Validating Blocks and Displaying a Warning Indicator
 
@@ -19,7 +19,7 @@ In this codelab, you'll create a new custom block type that generates a list of 
 
 ![Two instances of a custom block, one with a validation warning.](./final_range_blocks.png)
 
-You can find the code for the [completed custom block](https://github.com/google/blockly-samples/tree/master/examples/validation-and-warnings-codelab/complete-code/index.js) on GitHub.
+You can find the code for the [completed custom block](https://github.com/RaspberryPiFoundation/blockly-samples/tree/master/examples/validation-and-warnings-codelab/complete-code/index.js) on GitHub.
 
 ### What you'll need
 - A browser.
@@ -33,12 +33,12 @@ You can find the code for the [completed custom block](https://github.com/google
 ### Download the sample code
 You can get the sample code for this codelab by either downloading the zip here:
 
-[Download zip](https://github.com/google/blockly-samples/archive/master.zip)
+[Download zip](https://github.com/RaspberryPiFoundation/blockly-samples/archive/master.zip)
 
 or by cloning this git repo:
 
 ```bash
-git clone https://github.com/google/blockly-samples.git
+git clone https://github.com/RaspberryPiFoundation/blockly-samples.git
 ```
 
 If you downloaded the source as a zip, unpacking it should give you a root folder named `blockly-samples-master`.
@@ -266,7 +266,7 @@ In this codelab, you learned:
 * How to display a warning message on the block.
 * How to disable a block (without adding an event to the undo history).
 
-You can find the code for the [completed custom block](https://github.com/google/blockly-samples/tree/master/examples/validation-and-warnings-codelab/complete-code/index.js) on GitHub.
+You can find the code for the [completed custom block](https://github.com/RaspberryPiFoundation/blockly-samples/tree/master/examples/validation-and-warnings-codelab/complete-code/index.js) on GitHub.
 
 ### Resources
 For more information related topics, check out the documentation:

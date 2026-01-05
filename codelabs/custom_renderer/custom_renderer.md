@@ -3,7 +3,7 @@ summary: Codelab showing how to create custom renderers.
 id: custom-renderer
 categories: blockly,codelab,rendering,customization
 status: Published
-Feedback Link: https://github.com/google/blockly-samples/issues/new/choose
+Feedback Link: https://github.com/RaspberryPiFoundation/blockly-samples/issues/new/choose
 
 # Build custom renderers
 
@@ -49,7 +49,7 @@ Use the Use the [`npx @blockly/create-package`](https://www.npmjs.com/package/@b
 
 The initial application uses the default renderer and contains no code or definitions for a custom renderer.
 
-The complete code used in this codelab can be viewed in blockly-samples under [`examples/custom-renderer-codelab`](https://github.com/google/blockly-samples/tree/master/examples/custom-renderer-codelab).
+The complete code used in this codelab can be viewed in blockly-samples under [`examples/custom-renderer-codelab`](https://github.com/RaspberryPiFoundation/blockly-samples/tree/master/examples/custom-renderer-codelab).
 
 Before setting up the rest of the application, change the storage key used for this codelab application. This will ensure that the workspace is saved in its own storage, separate from the regular sample app, so that it doesn't interfere with other demos. In `serialization.js`, change the value of `storageKey` to some unique string. `customRenderersWorkspace` will work:
 

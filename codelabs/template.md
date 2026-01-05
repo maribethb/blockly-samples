@@ -3,7 +3,7 @@ summary: CODELAB SUMMARY
 id: TEMPLATE-CODELAB-ID
 categories: blockly,codelab,MORE CATEGORIES
 status: Draft
-Feedback Link: https://github.com/google/blockly-samples/issues/new
+Feedback Link: https://github.com/RaspberryPiFoundation/blockly-samples/issues/new
 
 # CODELAB TITLE
 

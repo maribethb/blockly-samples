@@ -1,6 +1,6 @@
 author: Blockly Team summary: How to use CSS in Blockly. id: css-identifier
 categories: blockly,codelab,css status: Published feedback link:
-https://github.com/google/blockly-samples/issues/new/choose
+https://github.com/RaspberryPiFoundation/blockly-samples/issues/new/choose
 
 # Use CSS in Blockly
 

@@ -37,7 +37,8 @@ exports.createPlugin = function (pluginName, options) {
 
   const isGit = !!gitURL;
   const isFirstParty =
-    options.firstParty || gitURL == 'https://github.com/google/blockly-samples';
+    options.firstParty ||
+    gitURL == 'https://github.com/RaspberryPiFoundation/blockly-samples';
 
   /**
    * Gets the name of the plugin prefixed with the type.

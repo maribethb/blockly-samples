@@ -3,7 +3,7 @@ summary: Codelab to customize a toolbox
 id: custom-toolbox
 categories: blockly,codelab,toolbox,customization
 status: Published
-Feedback Link: https://github.com/google/blockly-samples/issues/new/choose
+Feedback Link: https://github.com/RaspberryPiFoundation/blockly-samples/issues/new/choose
 
 # Customizing a Blockly toolbox
 
@@ -27,7 +27,7 @@ The resulting toolbox is shown below.
 
 ![A toolbox with colored background and the blockly label above the category text.](./final_toolbox.png)
 
-The code samples are written in ES6 syntax. You can find the code for the [completed custom toolbox](https://github.com/google/blockly-samples/tree/master/examples/custom-toolbox-codelab/complete-code/index.html) on GitHub.
+The code samples are written in ES6 syntax. You can find the code for the [completed custom toolbox](https://github.com/RaspberryPiFoundation/blockly-samples/tree/master/examples/custom-toolbox-codelab/complete-code/index.html) on GitHub.
 
 ### What you'll need
 - A browser.
@@ -44,12 +44,12 @@ toolbox definition that can be found in the provided code.
 ### Download the sample code
 You can get the sample code for this codelab by either downloading the zip here:
 
-[Download zip](https://github.com/google/blockly-samples/archive/master.zip)
+[Download zip](https://github.com/RaspberryPiFoundation/blockly-samples/archive/master.zip)
 
 or by cloning this git repo:
 
 ```bash
-git clone https://github.com/google/blockly-samples.git
+git clone https://github.com/RaspberryPiFoundation/blockly-samples.git
 ```
 
 If you downloaded the source as a zip, unpacking it should give you a root folder named `blockly-samples-master`.
@@ -520,4 +520,4 @@ The toolbox can be customized in a variety of ways to make it work for your appl
 * How to add an icon by adding a custom CSS class to the icon div.
 * How to change what HTML Elements are used for different parts of a category.
 * How to create a custom toolbox item.
-You can find the code for the [completed custom toolbox](https://github.com/google/blockly-samples/tree/master/examples/custom-toolbox-codelab/complete-code) on GitHub.
+You can find the code for the [completed custom toolbox](https://github.com/RaspberryPiFoundation/blockly-samples/tree/master/examples/custom-toolbox-codelab/complete-code) on GitHub.

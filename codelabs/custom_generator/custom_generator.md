@@ -3,7 +3,7 @@ summary: Codelab showing how to create and use a custom generator.
 id: custom-generator
 categories: blockly,codelab,generator
 status: Published
-Feedback Link: https://github.com/google/blockly-samples/issues/new/choose
+Feedback Link: https://github.com/RaspberryPiFoundation/blockly-samples/issues/new/choose
 
 # Build a custom generator
 
@@ -43,7 +43,7 @@ Use the [`npx @blockly/create-package app`](https://www.npmjs.com/package/@block
 
 The initial application has one custom block and includes JavaScript generator definitions for that block. Since this codelab will be creating a JSON generator instead, it will remove that custom block and add its own.
 
-The complete code used in this codelab can be viewed in blockly-samples under [`examples/custom-generator-codelab`](https://github.com/google/blockly-samples/tree/master/examples/custom-generator-codelab).
+The complete code used in this codelab can be viewed in blockly-samples under [`examples/custom-generator-codelab`](https://github.com/RaspberryPiFoundation/blockly-samples/tree/master/examples/custom-generator-codelab).
 
 Before setting up the rest of the application, change the storage key used for this codelab application. This will ensure that the workspace is saved in its own storage, separate from the regular sample app, so that it doesn't interfere with other demos. In `serialization.js`, change the value of `storageKey` to some unique string. `jsonGeneratorWorkspace` will work:
 

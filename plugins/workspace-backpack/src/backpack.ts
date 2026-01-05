@@ -657,7 +657,7 @@ export class Backpack
     this.contents_ = [];
     this.contents_ = this.filterDuplicates(
       // Support XML serialized content for backwards compatiblity:
-      // https://github.com/google/blockly-samples/issues/1827
+      // https://github.com/RaspberryPiFoundation/blockly-samples/issues/1827
       contents.map((content) =>
         content.startsWith('<block')
           ? this.blockXmlToJsonString(content)

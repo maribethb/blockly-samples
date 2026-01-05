@@ -36,7 +36,7 @@ suite('shadowBlockConversionChangeListener', function () {
       '<!DOCTYPE html><div id="blocklyDiv"></div>',
       {pretendToBeVisual: true},
     );
-    // See https://github.com/google/blockly-samples/issues/2528 for context.
+    // See https://github.com/RaspberryPiFoundation/blockly-samples/issues/2528 for context.
     global.SVGElement = window.SVGElement;
 
     this.workspace = Blockly.inject('blocklyDiv');

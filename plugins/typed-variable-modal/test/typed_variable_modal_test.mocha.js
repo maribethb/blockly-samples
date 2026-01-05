@@ -94,7 +94,7 @@ suite('TypedVariableModal', function () {
     //
     // This test is failing due to the modal and typed-variable-modal
     // plugins each getting separate copies of Blockly due to updates
-    // to dev-tool's webpack.config.js in google/blockly-samples#2228
+    // to dev-tool's webpack.config.js in RaspberryPiFoundation/blockly-samples#2228
     // to support having an exports stanza in Blockly's package.json.
     test.skip('Elements focused', function () {
       this.typedVarModal.init();

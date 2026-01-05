@@ -69,7 +69,7 @@ suite('WorkspaceSearch', function () {
     );
     this.workspace = Blockly.inject('blocklyDiv');
     this.workspaceSearch = new WorkspaceSearch(this.workspace);
-    // See https://github.com/google/blockly-samples/issues/2528 for context.
+    // See https://github.com/RaspberryPiFoundation/blockly-samples/issues/2528 for context.
     global.SVGElement = window.SVGElement;
   });
 
