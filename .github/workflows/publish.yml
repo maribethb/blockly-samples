@@ -4,6 +4,12 @@ name: publish
 
 on:
   workflow_dispatch: # Manually trigger. Colon is required.
+    inputs:
+      from-package:
+        description: 'Check to publish from-package instead of the default publish. This is used to publish packages that have already been version bumped and tagged by a previous workflow run, but failed to publish for some reason.'
+        required: false
+        type: boolean
+        default: false
   schedule:
     - cron: '5 17 * * 4' # Thursdays at 17:05 UTC (09:05 PST / 10:05 PDT)
 
@@ -55,7 +61,14 @@ jobs:
       - name: Publish
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: cd plugins && npx lerna publish --no-private --conventional-commits --create-release github --yes
+          FROM_PACKAGE: ${{ github.event.inputs['from-package'] }}
+        run: |
+          cd plugins
+          if [ "${FROM_PACKAGE}" = "true" ]; then
+            npx lerna publish from-package --yes --loglevel silly
+          else
+            npx lerna publish --no-private --conventional-commits --create-release github --yes --loglevel silly
+          fi
 
   update-gh-pages:
     name: Update GitHub Pages
