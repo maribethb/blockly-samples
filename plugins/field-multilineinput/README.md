@@ -1,6 +1,21 @@
 # @blockly/field-multilineinput [![Built on Blockly](https://tinyurl.com/built-on-blockly)](https://github.com/google/blockly)
 
-A [Blockly](https://www.npmjs.com/package/blockly) multilineinput field and associated block.
+A [Blockly](https://www.npmjs.com/package/blockly) multiline input field and
+associated block.
+
+#### Multiline input field
+
+![A block with the label "multiline text input:" and a multiline input field
+with the text "default text \n with newline character.](readme-media/on_block.png)
+
+#### Multiline input field with editor open
+
+![The same block with editor open.](readme-media/with_editor.png)
+
+#### Multiline input on collapsed block
+
+![The same block after being collapsed. It has the label "multiline text input:
+defau..." and a jagged right edge to show it is collapsed.](readme-media/collapsed.png)
 
 ## Installation
 
@@ -18,17 +33,23 @@ npm install @blockly/field-multilineinput --save
 
 ## Usage
 
-### Field
+This plugin adds a field of type `FieldMultilineInput` that is registered with
+the name `'field_multilinetext'`. It is a subclass of `Blockly.FieldInput`.
 
-This field accepts up to 3 parameters:
+This field stores a string as its value and a string as its text. Its value is
+always a valid string, while its text could be any string entered into its
+editor. Unlike a text input field, this field also supports newline characters
+entered in the editor.
 
-- "text" to specify the default text. Defaults to `""`.
-- "maxLines" to specify the maximum number of lines displayed before scrolling
-  functionality is enabled. Defaults to `Infinity`.
-- "spellcheck" to specify whether spell checking is enabled. Defaults to
-  `true`.
+The constructor for this field accepts three optional parameters:
 
-The multiline input field is a subclass of Blockly.FieldInput
+- `value`: The default text. Defaults to `""`.
+- `validator`: A function that is called to validate what the user entered.
+- `config`: An object with three optional properties:
+  - `maxLines`: The maximum number of lines displayed before scrolling
+    functionality is enabled. Defaults to `Infinity`.
+  - `spellcheck`: Whether spell checking is enabled. Defaults to `true`.
+  - `tooltip`: A tooltip.
 
 If you want to use only the field, you must register it with Blockly. You can
 do this by calling `registerFieldMultilineInput` before instantiating your
@@ -73,6 +94,65 @@ Blockly.defineBlocksWithJsonArray([
             }
     }]);
 ```
+
+### Customization
+
+#### Spellcheck
+
+The `setSpellcheck` function can be used to set whether the field spellchecks
+its input text or not. Spellchecking is on by default.
+
+![An animation showing multiline text input fields with and without
+spellcheck.](readme-media/spellcheck.gif)
+
+This applies to individual fields. If you want to modify all fields change the
+`Blockly.FieldMultilineInput.prototype.spellcheck_` property.
+
+#### Validation
+
+A multiline text input field's value is a string, so any validators must accept
+a string and return a string, `null`, or `undefined`.
+
+Here is an example of a validator that removes all 'a' characters from the
+string:
+
+```
+function(newValue) {
+  return newValue.replace(/a/gm, '');
+}
+```
+
+![An animation showing validation.](readme-media/validator.gif)
+
+### Serialization
+
+#### JSON
+
+The JSON for a multiline text input field looks like so:
+
+```json
+{
+  "fields": {
+    "FIELDNAME": "line1\nline2"
+  }
+}
+```
+
+where `FIELDNAME` is a string referencing a multiline text input field, and the
+value is the value to apply to the field. The value follows the same rules as
+the constructor value.
+
+#### XML
+
+The XML for a multiline text input field looks like so:
+
+```xml
+<field name="FIELDNAME">line1&amp;#10;line2</field>
+```
+
+where the field's `name` attribute contains a string referencing a multiline
+text input field, and the inner text is the value to apply to the field. The
+inner text value follows the same rules as the constructor value.
 
 ### Blocks
 
