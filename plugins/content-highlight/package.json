@@ -24,13 +24,13 @@
     "highlight",
     "workspace"
   ],
-  "homepage": "https://github.com/google/blockly-samples/tree/master/content-highlight#readme",
+  "homepage": "https://github.com/RaspberryPiFoundation/blockly-samples/tree/master/content-highlight#readme",
   "bugs": {
-    "url": "https://github.com/google/blockly-samples/issues"
+    "url": "https://github.com/RaspberryPiFoundation/blockly-samples/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/google/blockly-samples.git",
+    "url": "https://github.com/RaspberryPiFoundation/blockly-samples.git",
     "directory": "plugins/content-highlight"
   },
   "license": "Apache-2.0",

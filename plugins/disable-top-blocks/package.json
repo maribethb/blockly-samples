@@ -19,13 +19,13 @@
     "blockly-plugin",
     "disable-top-blocks"
   ],
-  "homepage": "git@github.com:google/blockly-samples/tree/master/plugins/disable-top-blocks#readme",
+  "homepage": "git@github.com:RaspberryPiFoundation/blockly-samples/tree/master/plugins/disable-top-blocks#readme",
   "bugs": {
-    "url": "git@github.com:google/blockly-samples/issues"
+    "url": "git@github.com:RaspberryPiFoundation/blockly-samples/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:google/blockly-samples.git",
+    "url": "git@github.com:RaspberryPiFoundation/blockly-samples.git",
     "directory": "plugins/disable-top-blocks"
   },
   "license": "Apache-2.0",
