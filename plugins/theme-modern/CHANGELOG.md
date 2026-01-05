@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.4](https://github.com/RaspberryPiFoundation/blockly-samples/compare/@blockly/theme-modern@7.0.3...@blockly/theme-modern@7.0.4) (2026-01-05)
+
+
+### Bug Fixes
+
+* update plugin URLs to RPF ([#2665](https://github.com/RaspberryPiFoundation/blockly-samples/issues/2665)) ([6c34039](https://github.com/RaspberryPiFoundation/blockly-samples/commit/6c3403960b8070eb8e576bd5702bdb53a09ac475))
+
+
+
 ## [7.0.3](https://github.com/google/blockly-samples/compare/@blockly/theme-modern@7.0.2...@blockly/theme-modern@7.0.3) (2025-12-19)
 
 **Note:** Version bump only for package @blockly/theme-modern

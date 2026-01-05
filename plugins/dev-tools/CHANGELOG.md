@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.7](https://github.com/RaspberryPiFoundation/blockly-samples/compare/@blockly/dev-tools@9.0.6...@blockly/dev-tools@9.0.7) (2026-01-05)
+
+
+### Bug Fixes
+
+* update plugin URLs to RPF ([#2665](https://github.com/RaspberryPiFoundation/blockly-samples/issues/2665)) ([6c34039](https://github.com/RaspberryPiFoundation/blockly-samples/commit/6c3403960b8070eb8e576bd5702bdb53a09ac475))
+
+
+
 ## [9.0.6](https://github.com/google/blockly-samples/compare/@blockly/dev-tools@9.0.5...@blockly/dev-tools@9.0.6) (2026-01-05)
 
 

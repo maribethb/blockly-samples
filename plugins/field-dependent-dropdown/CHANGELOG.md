@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.8](https://github.com/RaspberryPiFoundation/blockly-samples/compare/@blockly/field-dependent-dropdown@5.0.7...@blockly/field-dependent-dropdown@5.0.8) (2026-01-05)
+
+
+### Bug Fixes
+
+* update plugin URLs to RPF ([#2665](https://github.com/RaspberryPiFoundation/blockly-samples/issues/2665)) ([6c34039](https://github.com/RaspberryPiFoundation/blockly-samples/commit/6c3403960b8070eb8e576bd5702bdb53a09ac475))
+
+
+
 ## [5.0.7](https://github.com/google/blockly-samples/compare/@blockly/field-dependent-dropdown@5.0.6...@blockly/field-dependent-dropdown@5.0.7) (2026-01-05)
 
 **Note:** Version bump only for package @blockly/field-dependent-dropdown
