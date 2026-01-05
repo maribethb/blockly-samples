@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <title>Blockly Demo: Graph</title>
     <script src="https://www.google.com/jsapi"></script>
-    <script src="./node_modules/blockly/blockly_compressed.js"></script>
-    <script src="./node_modules/blockly/blocks_compressed.js"></script>
-    <script src="./node_modules/blockly/javascript_compressed.js"></script>
-    <script src="./node_modules/blockly/msg/en.js"></script>
+    <script src="../lib/blockly/blockly_compressed.js"></script>
+    <script src="../lib/blockly/blocks_compressed.js"></script>
+    <script src="../lib/blockly/javascript_compressed.js"></script>
+    <script src="../lib/blockly/msg/en.js"></script>
 
     <style>
       body {
@@ -552,7 +552,7 @@
         Graph.workspace = Blockly.inject('blocklyDiv', {
           collapse: false,
           disable: false,
-          media: './node_modules/blockly/media/',
+          media: '../lib/blockly/media/',
           toolbox: toolbox,
         });
 

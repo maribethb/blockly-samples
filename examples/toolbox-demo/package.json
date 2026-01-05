@@ -7,10 +7,10 @@
     "description": "Organize blocks into categories for the user.",
     "files": [
       "index.html",
-      "./node_modules/blockly/*_compressed.js",
-      "./node_modules/blockly/*_compressed.js.map",
-      "./node_modules/blockly/msg/en.js",
-      "./node_modules/blockly/media/*"
+      "../lib/blockly/*_compressed.js",
+      "../lib/blockly/*_compressed.js.map",
+      "../lib/blockly/msg/en.js",
+      "../lib/blockly/media/*"
     ]
   },
   "dependencies": {

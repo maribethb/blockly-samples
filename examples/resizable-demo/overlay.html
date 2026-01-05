@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <title>Blockly Demo: Resizable Blockly (Part 2)</title>
-    <script src="./node_modules/blockly/blockly_compressed.js"></script>
-    <script src="./node_modules/blockly/blocks_compressed.js"></script>
-    <script src="./node_modules/blockly/msg/en.js"></script>
+    <script src="../lib/blockly/blockly_compressed.js"></script>
+    <script src="../lib/blockly/blocks_compressed.js"></script>
+    <script src="../lib/blockly/msg/en.js"></script>
     <style>
       html,
       body {
@@ -95,7 +95,7 @@
       var blocklyArea = document.getElementById('blocklyArea');
       var blocklyDiv = document.getElementById('blocklyDiv');
       var demoWorkspace = Blockly.inject(blocklyDiv, {
-        media: './node_modules/blockly/media/',
+        media: '../lib/blockly/media/',
         toolbox: toolbox,
       });
       var onresize = function (e) {

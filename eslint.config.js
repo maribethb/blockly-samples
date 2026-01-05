@@ -38,6 +38,7 @@ module.exports = [
       'examples/theme-extension-codelab',
       'examples/turtle-field-demo',
       'examples/validation-and-warnings-codelab',
+      'examples/lib/',
       '**/dist/',
       '**/build/',
       'examples/blockly-svelte/public/bundle.js',

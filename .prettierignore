@@ -12,6 +12,7 @@ gh-pages/*
 **/build/*
 examples/blockly-svelte/public/bundle.js
 examples/blockly-angular/.angular
+examples/lib/*
 **/node_modules/*
 **/package-lock.json
 **/CHANGELOG.md

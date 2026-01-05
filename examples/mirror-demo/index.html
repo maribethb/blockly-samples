@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <title>Blockly Demo: Mirrored Blockly</title>
-    <script src="./node_modules/blockly/blockly_compressed.js"></script>
-    <script src="./node_modules/blockly/blocks_compressed.js"></script>
-    <script src="./node_modules/blockly/msg/en.js"></script>
+    <script src="../lib/blockly/blockly_compressed.js"></script>
+    <script src="../lib/blockly/blocks_compressed.js"></script>
+    <script src="../lib/blockly/msg/en.js"></script>
     <style>
       body {
         background-color: #fff;
@@ -110,12 +110,12 @@
 
       // Inject primary workspace.
       var primaryWorkspace = Blockly.inject('primaryDiv', {
-        media: './node_modules/blockly/media/',
+        media: '../lib/blockly/media/',
         toolbox: toolbox,
       });
       // Inject secondary workspace.
       var secondaryWorkspace = Blockly.inject('secondaryDiv', {
-        media: './node_modules/blockly/media/',
+        media: '../lib/blockly/media/',
         readOnly: true,
       });
       // Listen to events on primary workspace.

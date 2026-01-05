@@ -9,11 +9,11 @@
       "index.html",
       "index.js",
       "notification_backpack.js",
-      "./node_modules/blockly/*_compressed.js",
-      "./node_modules/blockly/*_compressed.js.map",
-      "./node_modules/blockly/msg/en.js",
-      "./node_modules/blockly/media/*",
-      "./node_modules/@blockly/workspace-backpack/dist/index.js"
+      "../lib/blockly/*_compressed.js",
+      "../lib/blockly/*_compressed.js.map",
+      "../lib/blockly/msg/en.js",
+      "../lib/blockly/media/*",
+      "../lib/@blockly/workspace-backpack/dist/index.js"
     ]
   },
   "dependencies": {
