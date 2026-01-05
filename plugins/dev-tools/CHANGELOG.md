@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.0.6](https://github.com/google/blockly-samples/compare/@blockly/dev-tools@9.0.5...@blockly/dev-tools@9.0.6) (2026-01-05)
+
+
+### Bug Fixes
+
+* Update broken links from Google repo ([#2655](https://github.com/google/blockly-samples/issues/2655)) ([8bd1177](https://github.com/google/blockly-samples/commit/8bd1177c9fa7e67be950c2be14d06a374116561a))
+
+
+
 ## [9.0.5](https://github.com/google/blockly-samples/compare/@blockly/dev-tools@9.0.4...@blockly/dev-tools@9.0.5) (2025-12-19)
 
 **Note:** Version bump only for package @blockly/dev-tools
