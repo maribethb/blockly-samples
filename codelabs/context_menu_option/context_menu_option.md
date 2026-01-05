@@ -3,7 +3,7 @@ summary: How to add a context menu option in Blockly.
 id: context-menu-option
 categories: blockly,codelab,contextmenu
 status: Published
-Feedback Link: https://github.com/google/blockly-samples/issues/new/choose
+Feedback Link: https://github.com/RaspberryPiFoundation/blockly-samples/issues/new/choose
 
 # Customizing your context menus
 
@@ -34,12 +34,12 @@ This codelab is focused on Blockly's context menus. Non-relevant concepts and co
 
 You can get the sample code for this code by either downloading the zip here:
 
-[Download zip](https://github.com/google/blockly-samples/archive/master.zip)
+[Download zip](https://github.com/RaspberryPiFoundation/blockly-samples/archive/master.zip)
 
 or by cloning this git repo:
 
 ```bash
-git clone https://github.com/google/blockly-samples.git
+git clone https://github.com/RaspberryPiFoundation/blockly-samples.git
 ```
 
 If you downloaded the source as a zip, unpacking it should give you a root folder named `blockly-samples-master`.

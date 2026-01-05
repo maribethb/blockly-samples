@@ -20,13 +20,13 @@
     "blockly",
     "blockly-plugin"
   ],
-  "homepage": "https://github.com/google/blockly-samples/tree/master/plugins/cross-tab-copy-paste#readme",
+  "homepage": "https://github.com/RaspberryPiFoundation/blockly-samples/tree/master/plugins/cross-tab-copy-paste#readme",
   "bugs": {
-    "url": "https://github.com/google/blockly-samples/issues"
+    "url": "https://github.com/RaspberryPiFoundation/blockly-samples/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/google/blockly-samples.git",
+    "url": "https://github.com/RaspberryPiFoundation/blockly-samples.git",
     "directory": "plugins/cross-tab-copy-paste"
   },
   "license": "Apache-2.0",

@@ -21,13 +21,13 @@
     "blockly-theme",
     "tritanopia"
   ],
-  "homepage": "https://github.com/google/blockly-samples/tree/master/plugins/theme-tritanopia#readme",
+  "homepage": "https://github.com/RaspberryPiFoundation/blockly-samples/tree/master/plugins/theme-tritanopia#readme",
   "bugs": {
-    "url": "https://github.com/google/blockly-samples/issues"
+    "url": "https://github.com/RaspberryPiFoundation/blockly-samples/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/google/blockly-samples.git",
+    "url": "https://github.com/RaspberryPiFoundation/blockly-samples.git",
     "directory": "plugins/theme-tritanopia"
   },
   "license": "Apache-2.0",

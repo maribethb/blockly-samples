@@ -19,13 +19,13 @@
     "blockly-plugin",
     "fixed-edges"
   ],
-  "homepage": "https://github.com/google/blockly-samples/tree/master/fixed-edges#readme",
+  "homepage": "https://github.com/RaspberryPiFoundation/blockly-samples/tree/master/fixed-edges#readme",
   "bugs": {
-    "url": "https://github.com/google/blockly-samples/issues"
+    "url": "https://github.com/RaspberryPiFoundation/blockly-samples/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/google/blockly-samples.git",
+    "url": "https://github.com/RaspberryPiFoundation/blockly-samples.git",
     "directory": "fixed-edges"
   },
   "license": "Apache-2.0",

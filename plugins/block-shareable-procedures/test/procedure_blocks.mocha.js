@@ -1306,7 +1306,7 @@ suite('Procedures', function () {
         'with arguments that call another procedure does not cause a crash',
       function () {
         // This test exercises the scenario reported in
-        // https://github.com/google/blockly-samples/issues/2557
+        // https://github.com/RaspberryPiFoundation/blockly-samples/issues/2557
         Blockly.serialization.workspaces.load(
           {
             blocks: {

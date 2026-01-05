@@ -22,13 +22,13 @@
     "blockly-theme",
     "theme-hackermode"
   ],
-  "homepage": "git@github.com:google/blockly-samples/tree/master/plugins/theme-hackermode#readme",
+  "homepage": "git@github.com:RaspberryPiFoundation/blockly-samples/tree/master/plugins/theme-hackermode#readme",
   "bugs": {
-    "url": "git@github.com:google/blockly-samples/issues"
+    "url": "git@github.com:RaspberryPiFoundation/blockly-samples/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:google/blockly-samples.git",
+    "url": "git@github.com:RaspberryPiFoundation/blockly-samples.git",
     "directory": "plugins/theme-hackermode"
   },
   "license": "Apache-2.0",

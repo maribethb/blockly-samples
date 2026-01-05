@@ -20,13 +20,13 @@
     "blockly-plugin",
     "modal"
   ],
-  "homepage": "https://github.com/google/blockly-samples/tree/master/plugins/modal#readme",
+  "homepage": "https://github.com/RaspberryPiFoundation/blockly-samples/tree/master/plugins/modal#readme",
   "bugs": {
-    "url": "https://github.com/google/blockly-samples/issues"
+    "url": "https://github.com/RaspberryPiFoundation/blockly-samples/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/google/blockly-samples.git",
+    "url": "https://github.com/RaspberryPiFoundation/blockly-samples.git",
     "directory": "plugins/modal"
   },
   "license": "Apache 2.0",

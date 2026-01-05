@@ -3,7 +3,7 @@ summary: In this codelab, you’ll add Blockly editor to a simple web app, to al
 id: getting-started
 categories: blockly,codelab,quickstart
 status: Published
-Feedback Link: https://github.com/google/blockly-samples/issues/new/choose
+Feedback Link: https://github.com/RaspberryPiFoundation/blockly-samples/issues/new/choose
 
 # Getting started with Blockly
 
@@ -43,12 +43,12 @@ This codelab is focused on Blockly. The app structure, non-relevant concepts and
 
 You can get the sample code for this code by either downloading the zip here:
 
-[Download zip](https://github.com/google/blockly-samples/archive/master.zip)
+[Download zip](https://github.com/RaspberryPiFoundation/blockly-samples/archive/master.zip)
 
 or by cloning this git repo:
 
 ```bash
-git clone https://github.com/google/blockly-samples.git
+git clone https://github.com/RaspberryPiFoundation/blockly-samples.git
 ```
 
 If you downloaded the source as a zip, unpacking it should give you a root folder named `blockly-samples-master`.
@@ -119,7 +119,7 @@ Importing Blockly this way loads four default modules.
 
 ### Alternate imports
 
-There are many ways to import a library in JavaScript, and this tutorial does not cover all of them. For samples that show how to integrate Blockly in your project, look at the `examples` folder in [blockly-samples](https://github.com/google/blockly-samples).
+There are many ways to import a library in JavaScript, and this tutorial does not cover all of them. For samples that show how to integrate Blockly in your project, look at the `examples` folder in [blockly-samples](https://github.com/RaspberryPiFoundation/blockly-samples).
 
 You can also define your imports more carefully to get [different generators](https://www.npmjs.com/package/blockly#blockly-generators) and [locales](https://www.npmjs.com/package/blockly#blockly-languages).
 

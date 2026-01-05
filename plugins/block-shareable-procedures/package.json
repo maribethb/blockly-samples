@@ -22,13 +22,13 @@
     "blockly-block",
     "shareable-procedures"
   ],
-  "homepage": "https://github.com/google/blockly-samples/tree/master/plugins/block-shareable-procedures#readme",
+  "homepage": "https://github.com/RaspberryPiFoundation/blockly-samples/tree/master/plugins/block-shareable-procedures#readme",
   "bugs": {
-    "url": "https://github.com/google/blockly-samples/issues"
+    "url": "https://github.com/RaspberryPiFoundation/blockly-samples/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/google/blockly-samples.git",
+    "url": "https://github.com/RaspberryPiFoundation/blockly-samples.git",
     "directory": "plugins/block-shareable-procedures"
   },
   "license": "Apache-2.0",
