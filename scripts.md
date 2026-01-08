@@ -99,9 +99,10 @@ latest tags pulled. This is taken care of by the `publish:prepare` script.
 ### `npm run publish:prepare`
 
 This script will clone a copy of blockly-samples to a directory called `dist`,
-run `npm ci`, build and test all plugins, and then log in to the npm publishing
-service. It must be run before any of the other manual publishing commands are
-run.
+run `npm ci`, then build and test all plugins.
+
+Note that this script does not handle npm authentication. You will need to
+already possess a valid npm granular access token in order to publish.
 
 If any plugin fails to build or some tests fail, this script should fail. Since
 nothing has been pushed to npm or github, you can simply correct the error and
