@@ -52,6 +52,50 @@ This script builds all files needed to deploy plugins and examples to GitHub Pag
 
 This script installs a beta version of Blockly, builds all files needed to deploy plugins and examples to GitHub Pages, then starts a local server with that content.
 
+### `npm run publish:manual`
+
+This script will first run `npm run publish:prepare`. It will
+publish all of the changed plugins since the last release, using the `dist`
+directory. It runs the lerna command that uses conventional commits to determine
+a new version number for each plugin, and publishes the new versions to npm and
+to a github release and tag.
+
+If there is some error with npm while running this command, you may end up in a
+state where some plugins have been published to npm and not others, after lerna
+has already tagged the new releases. You can recover from this state by fixing
+the error, and then running either
+`npm run publish:unpublishedOnly` or `npm run publish:force`.
+
+### `npm run publish:unpublishedOnly`
+
+This script will first run `npm run publish:prepare`. It uses the `dist`
+directory created in that script. It uses lerna to check each plugin to see if the version
+in `package.json` matches the version on npm. If a version is not yet on npm, it will publish
+that plugin without updating its version number. Thus, this script should only be used
+after `lerna version` has been run in some form (most commonly, during a run of
+`npm run publish:manual` that subsequently failed).
+
+If this script fails, correct the error and re-run
+`npm run publish:unpublishedOnly`.
+
+### `npm run publish:force`
+
+This script will first run `npm run publish:prepare`. It will use lerna
+to force publish all packages, even those that have not changed. You can use this
+if you run into publishing problems to recover from error states, but you should prefer
+to use `npm run publish:unpublishedOnly` if possible.
+
+### `npm run publish:checkVersions`
+
+This script will first run `npm run publish:prepare`. It will run `lerna
+version` to generate the new version numbers using conventional commits that would be
+created during a full publish action, but it will not actually push the changes nor
+create any tags. This can be used to check which plugins would be published and under
+what versions. Note to get accurate results with `lerna version` you must have the
+latest tags pulled. This is taken care of by the `publish:prepare` script.
+
+## Other Scripts
+
 ### `npm run publish:prepare`
 
 This script will clone a copy of blockly-samples to a directory called `dist`,
@@ -63,51 +107,8 @@ If any plugin fails to build or some tests fail, this script should fail. Since
 nothing has been pushed to npm or github, you can simply correct the error and
 try again.
 
-### `npm run publish:manual`
-
-This script assumes that you have already run `npm run publish:prepare`. It will
-publish all of the changed plugins since the last release, using the `dist`
-directory. It runs the lerna command that uses conventional commits to determine
-a new version number for each plugin, and publishes the new versions to npm and
-to a github release and tag. Plugins do not automatically build themselves
-before publishing. You must have run `npm run publish:prepare` script ahead of
-time for this reason.
-
-If there is some error with npm while running this command, you may end up in a
-state where some plugins have been published to npm and not others, after lerna
-has already tagged the new releases. You can recover from this state by fixing
-the error, and then running `npm run publish:prepare` again followed by
-`npm run publish:unpublishedOnly` or `npm run publish:force`.
-
-### `npm run publish:unpublishedOnly`
-
-This script assumes that you have already run `npm run publish:prepare`. It uses the `dist`
-directory created in that script. It uses lerna to check each plugin to see if the version
-in `package.json` matches the version on npm. If a version is not yet on npm, it will publish
-that plugin without updating its version number. Thus, this script should only be used
-after `lerna version` has been run in some form (most commonly, during a run of
-`npm run publish:manual` that subsequently failed).
-
-If this script fails, correct the error and re-run `npm run publish:prepare` and
-`npm run publish:unpublishedOnly`.
-
-### `npm run publish:force`
-
-This script assumes you have already run `npm run publish:prepare`. It will use lerna
-to force publish all packages, even those that have not changed. You can use this
-if you run into publishing problems to recover from error states, but you should prefer
-to use `npm run publish:unpublishedOnly` if possible.
-
-### `npm run publish:checkVersions`
-
-This script assumes you have already run `npm run publish:prepare`. It will run `lerna
-version` to generate the new version numbers using conventional commits that would be
-created during a full publish action, but it will not actually push the changes nor
-create any tags. This can be used to check which plugins would be published and under
-what versions. Note to get accurate results with `lerna version` you must have the
-latest tags pulled. This is taken care of by the `publish:prepare` script.
-
-## Other Scripts
+This script will be run automatically before any of the other publish scripts,
+so you do not need to run it manually first.
 
 ### `npm run deploy:prepare`
 
