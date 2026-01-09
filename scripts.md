@@ -52,6 +52,30 @@ This script builds all files needed to deploy plugins and examples to GitHub Pag
 
 This script installs a beta version of Blockly, builds all files needed to deploy plugins and examples to GitHub Pages, then starts a local server with that content.
 
+## Publishing scripts
+
+Note that publishing via the command line is not preferred. You should
+use the GitHub Action workflow whenever possible, which can handle
+publishing all plugins as well as recovering from the partially-published
+state (publishing unpublished plugins only).
+
+Note that none of these scripts will handle npm authentication. You need to
+configure an npm authentication token before you can use these scripts.
+
+Full publishing documentation can be found in the internal team documentation.
+
+### `npm run publish:prepare`
+
+This script will clone a copy of blockly-samples to a directory called `dist`,
+run `npm ci`, then build and test all plugins.
+
+If any plugin fails to build or some tests fail, this script should fail. Since
+nothing has been pushed to npm or github, you can simply correct the error and
+try again.
+
+This script will be run automatically before any of the other publish scripts,
+so you do not need to run it manually first.
+
 ### `npm run publish:manual`
 
 This script will first run `npm run publish:prepare`. It will
@@ -95,21 +119,6 @@ what versions. Note to get accurate results with `lerna version` you must have t
 latest tags pulled. This is taken care of by the `publish:prepare` script.
 
 ## Other Scripts
-
-### `npm run publish:prepare`
-
-This script will clone a copy of blockly-samples to a directory called `dist`,
-run `npm ci`, then build and test all plugins.
-
-Note that this script does not handle npm authentication. You will need to
-already possess a valid npm granular access token in order to publish.
-
-If any plugin fails to build or some tests fail, this script should fail. Since
-nothing has been pushed to npm or github, you can simply correct the error and
-try again.
-
-This script will be run automatically before any of the other publish scripts,
-so you do not need to run it manually first.
 
 ### `npm run deploy:prepare`
 
